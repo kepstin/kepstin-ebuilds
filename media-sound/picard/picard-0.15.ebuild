@@ -38,11 +38,6 @@ S="${WORKDIR}/${MY_P}"
 
 DOCS="AUTHORS.txt INSTALL.txt NEWS.txt"
 
-src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.13-ffmpeg.patch"
-	distutils_src_prepare
-}
-
 src_configure() {
 	$(PYTHON -f) setup.py config || die "setup.py config failed"
 	if ! use fingerprint; then
@@ -62,19 +57,4 @@ src_install() {
 
 	doicon picard.ico || die 'doicon failed'
 	domenu picard.desktop || die 'domenu failed'
-}
-
-pkg_postinst() {
-	distutils_pkg_postinst
-	echo
-	ewarn "If you are upgrading Picard and it does not start"
-	ewarn "try removing Picard's settings:"
-	ewarn "	rm ~/.config/MusicBrainz/Picard.conf"
-	elog
-	elog "You should set the environment variable BROWSER to something like"
-	elog "\"firefox '%s' &\" to let python know which browser to use."
-	if use coverart; then
-		ewarn "You have downloaded and installed the coverart downloader plugin."
-		ewarn "If you expect it to work please enable it in Options->Plugins."
-	fi
 }
