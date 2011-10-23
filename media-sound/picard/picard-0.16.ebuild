@@ -87,8 +87,8 @@ pkg_postinst() {
 	elog "\"firefox '%s' &\" to let python know which browser to use."
 	if use acoustid; then
 		ewarn "To enable acoustid support in Picard, go to Advanced->Fingerprinting"
-		ewarn "in the options menu, select 'Use AcoustID' and enter '/usr/bin/fpcalc'"
-		ewarn "in the 'Fingerprint calculator' field. You will have to obtain your"
+		ewarn "in the options menu, select 'Use AcoustID'. You will have to obtain your"
 		ewarn "own API key, follow the instructions in the dialog."
+		ewarn "You can leave the 'Fingerprint calculator' field blank."
 	fi
 }
