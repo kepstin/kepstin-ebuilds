@@ -18,8 +18,10 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 src_configure() {
-	MYCMAKEFLAGS="-DWITH_AVFFT=ON"
-	MYCMAKEFLAGS="${MYCMAKEFLAGS} $(cmake-utils_use_build examples EXAMPLES)"
-	MYCMAKEFLAGS="${MYCMAKEFLAGS} $(cmake-utils_use_tools tools TOOLS)"
+	local mycmakeargs=(
+		-DWITH_AVFFT=ON
+		$(cmake-utils_use_build examples EXAMPLES)
+		$(cmake-utils_use_build tools TOOLS)
+	)
 	cmake-utils_src_configure
 }
