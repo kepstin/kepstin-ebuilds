@@ -1,6 +1,8 @@
 # Copyright © 2011 Calvin Walton
 # Distributed under the terms of the GNU General Public License v2
 
+EAPI="3"
+
 inherit cmake-utils
 
 DESCRIPTION="A library that implements an algorithm for extracting fingerprints from any audio source."
