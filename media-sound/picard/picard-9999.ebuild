@@ -16,6 +16,7 @@ HOMEPAGE="http://musicbrainz.org/doc/PicardQt"
 SRC_URI=""
 EGIT_REPO_URI="git://git.musicbrainz.org/picard.git"
 EGIT_BRANCH="collections"
+EGIT_MASTER="collections"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -83,9 +84,6 @@ pkg_postinst() {
 	ewarn "If you are upgrading Picard and it does not start"
 	ewarn "try removing Picard's settings:"
 	ewarn "	rm ~/.config/MusicBrainz/Picard.conf"
-	elog
-	elog "You should set the environment variable BROWSER to something like"
-	elog "\"firefox '%s' &\" to let python know which browser to use."
 	if use acoustid; then
 		ewarn "To enable acoustid support in Picard, go to Advanced->Fingerprinting"
 		ewarn "in the options menu, select 'Use AcoustID'. You will have to obtain your"
