@@ -15,8 +15,6 @@ DESCRIPTION="An improved rewrite/port of the Picard Tagger using Qt"
 HOMEPAGE="http://musicbrainz.org/doc/PicardQt"
 SRC_URI=""
 EGIT_REPO_URI="git://git.musicbrainz.org/picard.git"
-EGIT_BRANCH="collections"
-EGIT_COMMIT="collections"
 
 LICENSE="GPL-2"
 SLOT="0"
