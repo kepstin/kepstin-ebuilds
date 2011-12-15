@@ -8,6 +8,7 @@ inherit cmake-utils
 DESCRIPTION="A library to add MusicBrainz lookup capabilities to an application."
 HOMEPAGE="http://musicbrainz.org/doc/libmusicbrainz"
 MY_P="${P/_/}"
+S="${WORKDIR}/${MY_P}"
 SRC_URI="ftp://ftp.musicbrainz.org/pub/musicbrainz/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="LGPL-2.1"
