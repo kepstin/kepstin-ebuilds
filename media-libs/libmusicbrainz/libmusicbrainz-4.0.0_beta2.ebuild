@@ -3,6 +3,7 @@
 
 EAPI="3"
 
+CMAKE_IN_SOURCE_BUILD=1
 inherit cmake-utils
 
 DESCRIPTION="A library to add MusicBrainz lookup capabilities to an application."
