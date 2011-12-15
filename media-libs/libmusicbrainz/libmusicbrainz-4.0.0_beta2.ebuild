@@ -12,7 +12,6 @@ SRC_URI="ftp://ftp.musicbrainz.org/pub/musicbrainz/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="~amd64"
-IUSE="examples tools"
 
 RDEPEND="
     >=net-libs/neon-0.25
