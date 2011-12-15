@@ -15,6 +15,6 @@ KEYWORDS="~amd64"
 IUSE="examples tools"
 
 RDEPEND="
-    >=net-misc/neon-0.25
+    >=net-libs/neon-0.25
 "
 DEPEND="${RDEPEND}"
