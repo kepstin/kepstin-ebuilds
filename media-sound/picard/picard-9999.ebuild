@@ -14,7 +14,7 @@ MY_P="${P/_/}"
 DESCRIPTION="An improved rewrite/port of the Picard Tagger using Qt"
 HOMEPAGE="http://musicbrainz.org/doc/PicardQt"
 SRC_URI=""
-EGIT_REPO_URI="git://git.musicbrainz.org/picard.git"
+EGIT_REPO_URI="git://github.com/musicbrainz/picard.git"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,9 +25,7 @@ DEPEND="
 	dev-python/PyQt4[X]
 	media-libs/mutagen
 	cdda? ( >=media-libs/libdiscid-0.1.1 )
-	ffmpeg? (
-		virtual/ffmpeg
-		>=media-libs/libofa-0.9.2 )"
+"
 RDEPEND="${DEPEND}
 	acoustid? ( media-libs/chromaprint[examples] )
 "
@@ -40,27 +38,10 @@ S="${WORKDIR}/${MY_P}"
 DOCS="AUTHORS.txt INSTALL.txt NEWS.txt"
 
 pkg_setup() {
-	if ! use ffmpeg; then
-		ewarn "The 'ffmpeg' USE flag is disabled. Acoustic fingerprinting and"
-		ewarn "recognition will not be available."
-	fi
 	if ! use cdda; then
 		ewarn "The 'cdda' USE flag is disabled. CD index lookup and"
 		ewarn "identification will not be available. You can get audio CD support"
 		ewarn "by installing media-libs/libdiscid."
-	fi
-}
-
-src_prepare() {
-	distutils_src_prepare
-}
-
-src_configure() {
-	$(PYTHON -f) setup.py config || die "setup.py config failed"
-	if ! use ffmpeg; then
-		sed -i -e "s:\(^with-avcodec\ =\ \).*:\1False:" \
-			-e "s:\(^with-libofa\ =\ \).*:\1False:" \
-			build.cfg || die "sed failed"
 	fi
 }
 
