@@ -19,7 +19,7 @@ EGIT_REPO_URI="git://github.com/musicbrainz/picard.git"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="acoustid cdda ffmpeg nls"
+IUSE="acoustid cdda nls"
 
 DEPEND="
 	dev-python/PyQt4[X]
