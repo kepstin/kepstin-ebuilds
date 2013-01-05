@@ -14,7 +14,6 @@ inherit subversion distutils
 
 DESCRIPTION="Mutagen is an audio metadata tag reader and writer implemented in pure Python."
 HOMEPAGE="http://code.google.com/p/mutagen http://pypi.python.org/pypi/mutagen"
-SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
