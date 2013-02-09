@@ -17,6 +17,6 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 
 src_install() {
-	dobin fileprune || die
-	doman fileprune.1 || die
+	dobin fileprune
+	doman fileprune.1
 }
