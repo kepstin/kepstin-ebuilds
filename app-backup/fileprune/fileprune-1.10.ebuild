@@ -20,6 +20,7 @@ RDEPEND="${DEPEND}"
 
 src_compile() {
 	# Easier to just build it manually than patch the Makefile
+	echo "$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o fileprune fileprune.c -lm"
 	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o fileprune fileprune.c -lm || die
 }
 
