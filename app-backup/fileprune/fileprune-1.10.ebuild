@@ -5,7 +5,7 @@ EAPI=4
 
 DESCRIPTION="Delete files from a backup set maintaining a time distribution"
 HOMEPAGE="http://www.spinellis.gr/sw/unix/fileprune/"
-SRC_URI="http://www.spinellis.gr/sw/unix/${PN}/${PNV}.tar.gz"
+SRC_URI="http://www.spinellis.gr/sw/unix/${PN}/${P}.tar.gz"
 
 # Note that the fileprune license is non-free; modification is not permitted
 LICENSE="fileprune"
