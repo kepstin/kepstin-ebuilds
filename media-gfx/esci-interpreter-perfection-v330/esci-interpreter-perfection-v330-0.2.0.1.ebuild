@@ -35,7 +35,7 @@ src_compile() { :; }
 
 src_install() {
 	# install scanner firmware
-	insinto /usr/share/iscan
+	insinto /usr/share/esci
 	doins "${WORKDIR}"/usr/share/esci/*
 
 	dodoc usr/share/doc/*/*
@@ -47,7 +47,7 @@ src_install() {
 
 pkg_setup() {
 	basecmds=(
-		"iscan-registry --COMMAND interpreter usb 0x04b8 0x0142 /opt/iscan/lib/libesci-interpreter-perfection-v330 /usr/share/iscan/${FIRMWARE}"
+		"iscan-registry --COMMAND interpreter usb 0x04b8 0x0142 /opt/iscan/lib/libesci-interpreter-perfection-v330 /usr/share/esci/${FIRMWARE}"
 	)
 }
 
