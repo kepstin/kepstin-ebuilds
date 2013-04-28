@@ -54,7 +54,7 @@ pkg_setup() {
 pkg_postinst() {
 	elog
 	elog "Firmware file ${FIRMWARE} for ${SCANNER}"
-	elog "has been installed in /usr/share/iscan."
+	elog "has been installed in /usr/share/esci."
 	elog
 
 	# Only register scanner on new installs
